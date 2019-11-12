@@ -1,0 +1,827 @@
+/*global style*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #ffffff;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+    height: 100%
+}
+
+/*heading style*/
+h1 {
+    font-weight: bold;
+    font-size: 7vh;
+    font-family: muli,
+        sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 5vh;
+    font-family: muli,
+        sans-serif;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 3.4vh;
+    font-family: muli,
+        sans-serif;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 3vh;
+    font-family: muli,
+        sans-serif;
+}
+
+
+
+p {
+    font-weight: normal;
+    font-size: 2.5vh;
+    font-family: muli,
+        sans-serif;
+}
+
+/*color change when mouse hovered on*/
+a:hover {
+    color: #96d9dd;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:
+        #96d9dd;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 10px #005788;
+
+}
+
+
+
+
+/* nav bar on the top*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    font: bold 18px 'muli', sans-serif;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+/* navbar logo on the leftside*/
+.nav-logo {
+    width: 130px;
+    min-width: 130px;
+    height: 40px;
+    min-height: 40px;
+    margin-left: 0px;
+}
+
+/* The items on the navbar menu*/
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+/* why us, lesson, log in*/
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+    /*padding: top right bottom left*/
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #005788;
+}
+
+.nav-links {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-right: 10px;
+}
+
+.sign-up-button {
+    background-color: #005788;
+    color: #ffffff;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    font: bold 18px 'muli',
+        sans-serif;
+    z-index: 50;
+
+}
+
+.nav-grid {
+
+    display: inline-flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0px;
+    width: 100%;
+    align-items: center;
+}
+
+/*the burger menu to navigate on mobile screen*/
+.burger-menu {
+    cursor: pointer;
+    height: 30px;
+    margin: 15px 20px 0px 0px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    height: 5px;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    ;
+    background-color: #005788;
+    border-radius: 3px;
+    display: block;
+}
+
+/* the burger*/
+.line1 {
+    transform: translateY(-4px)
+}
+
+.line3 {
+    transform: translateY(4px)
+}
+
+.change .line1 {
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: translateY(-4px) rotate(45deg);
+}
+
+
+/*title page background image*/
+.fuji-image {
+    width: 100%;
+    height: 92%;
+    min-height: 92%;
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    background-image: url("../img/fuji_imagery.png");
+
+}
+
+#titlepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+    padding: 0;
+    background-color: #ffffff;
+
+}
+
+.title-page-grid {
+    z-index: 10;
+    width: 100%;
+    height: 92vh;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.landing-title {
+    color: #ffffff;
+    position: relative;
+    display: box;
+    top: 14%;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+/*button on the redsun on background*/
+.red-sun-button-loader {
+    margin-top: 2vh;
+}
+
+.intro-grid {
+    box-sizing: border-box;
+
+    display: block;
+    color: #ffffff;
+    z-index: 20;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2.5vw;
+    text-align: center;
+
+}
+
+.divide-line-loader {
+    padding: 2vw 0;
+}
+
+.red-line {
+
+    background-color: #ff0006;
+    width: 35vw;
+    height: 2px;
+}
+
+/*Section: Learn Japanese With Fuji*/
+#why-us {
+    background-color: #005788;
+    color: white;
+}
+
+.why-us-grid {
+    box-sizing: border-box;
+
+    z-index: 10;
+    width: 100%;
+    height: 92vh;
+    padding: 0 8%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.second-title-loader {
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 8vh 0 5vh 0;
+}
+
+
+/*features display*/
+.features-grid {
+    width: 100%;
+    position: center;
+    margin: 0 auto;
+
+
+}
+
+.features {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: top;
+    position: center;
+}
+
+.features div {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 4vw;
+    transition: 400ms ease;
+}
+
+.features img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+
+}
+
+/* as mouse hovered on a feature field, change the background and font color*/
+.features div:hover {
+    background-color: #ffffff;
+    color: #005788
+}
+
+
+.feature-head {
+
+    box-sizing: border-box;
+    height: 11vh;
+    display: block;
+    align-items: center;
+    padding: 0 0 20px;
+
+}
+
+/*Section: social static*/
+#social-static {
+    background-color: #96d9dd;
+}
+
+.static-grid {
+
+    box-sizing: border-box;
+    z-index: 10;
+    width: 100%;
+    height: 40vh;
+    padding: 2vh 5%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.statics img {
+    width: 150px;
+    height: 150px;
+}
+
+.statics {
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-around;
+    position: center;
+    align-items: center;
+}
+
+.static-col {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 1vw;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.num-unit {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.num {
+    font-size: 40px;
+}
+
+/*Section: Our Featured Courses */
+
+#courses {
+    background-color: #ffffff;
+    color: #005788;
+}
+
+.courses-grid {
+    box-sizing: border-box;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2vh;
+
+}
+
+#course-title {
+    margin-bottom: 20px;
+}
+
+#course-intro {
+    padding: 0 10vw;
+}
+
+.course-list-grid {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4vh;
+}
+
+.course-row {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.course-container {
+    box-sizing: border-box;
+    padding: 0 2vw 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* on mouse hovered on change img to solid backgroud and show course list*/
+.img-wrap {
+    display: block;
+    height: 150px;
+    width: 250px;
+    margin: 0 auto;
+    font: normal 15px 'muli',
+        sans-serif;
+    color: #005788;
+}
+
+.course-container img {
+    display: block;
+    height: 150px;
+    width: 250px;
+}
+
+.course-content {
+    position: relative;
+    top: 25%;
+    left: 20%;
+
+}
+
+.course-content a:hover {
+    color: white;
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 150px;
+    width: 250px;
+    background-color: #96d9dd;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: .5s ease;
+
+}
+
+.img-wrap:hover .overlay {
+    opacity: 1;
+}
+
+/*Secton: they love FUJI!*/
+#comments {
+    background-color: #96d9dd;
+
+}
+
+#comment-title {
+    color: #ffffff;
+}
+
+.comments-grid {
+    box-sizing: border-box;
+    z-index: 10;
+    width: 100%;
+    height: 92vh;
+    padding: 0 8%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2vh;
+}
+
+.slidershow {
+    color: #005788;
+    width: 100%;
+    height: 50vh;
+    margin-top: 4vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.change-nav {
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    position: center;
+    margin: 0 auto;
+
+}
+
+/*use the bar to change slide*/
+.change-bar {
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.change-bar:hover {
+    background: #fff;
+}
+
+input[name="change-slide"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 80%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+    display: inline-flex
+}
+
+.slide img {
+    width: 220px;
+    height: 220px;
+    margin: 0 50px;
+}
+
+.comment-container {
+    height: 80%;
+    padding: 0 4vw;
+
+}
+
+#com-info {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: muli,
+        sans-serif;
+}
+
+#com-content {
+    font-style: italic;
+
+    font-family: muli,
+        sans-serif;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 20px;
+    height: 150px;
+}
+
+#c1:checked~.s1 {
+    margin-left: 0;
+}
+
+#c2:checked~.s1 {
+    margin-left: -20%;
+}
+
+#c3:checked~.s1 {
+    margin-left: -40%;
+}
+
+#c4:checked~.s1 {
+    margin-left: -60%;
+}
+
+#c5:checked~.s1 {
+    margin-left: -80%;
+}
+
+#join-button {
+    margin: 0 auto;
+
+}
+
+/*Section: benifit emphasis*/
+#benifit {
+    background: #005788;
+    color: #ffffff;
+}
+
+.benifit-grid {
+    box-sizing: border-box;
+    z-index: 10;
+    width: 100%;
+    height: 60vh;
+    padding: 0 8%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2vh;
+
+}
+
+.benifit-list {
+    text-align: center;
+    margin: 40px;
+}
+
+/* footer */
+#footer {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    color: #005788;
+    background-color: #ffffff;
+    margin: 2% 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-list {
+    padding: 0 20%;
+    margin-bottom: 20px;
+    display: inline-flex;
+    justify-content: space-around;
+    font-family: muli,
+        sans-serif;
+}
+
+.footer-list a {
+    margin: 0 20px;
+}
+
+#company-name {
+    font-weight: 400;
+    font-size: 15px;
+    font-family: muli,
+        sans-serif;
+}
+
+/*mobile screen*/
+@media only screen and (max-width: 768px) {
+
+
+    .nav-menu {
+        position: absolute;
+        display: flex;
+        left: 0px;
+        height: 60vh;
+        width: 50vw;
+        top: 8vh;
+        justify-content: space-around;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: all 200ms ease;
+        z-index: 1;
+        transform: translateX(-100%);
+    }
+
+
+    .nav-button-loader {
+        display: flex;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        margin: 10px auto 10px;
+    }
+
+    .nav-sign-up-button {
+        margin: 20px auto 0;
+    }
+
+    .nav-links {
+        display: flex;
+        top: 80px;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+
+    .nav-item {
+        padding-bottom: 10px;
+        margin: 0;
+        margin-bottom: 14px;
+        line-height: 2;
+
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .why-us-grid,
+    .static-grid,
+    .courses-grid,
+    .comments-grid,
+    .benifit-grid {
+        height: auto;
+    }
+
+    #course-button,
+    #join-button,
+    #benifit-button {
+        margin-bottom: 40px;
+    }
+
+    .features {
+        display: inline-flex;
+        justify-content: space-around;
+        position: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .statics {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-row {
+        flex-direction: column
+    }
+
+    .slidershow {
+        height: auto;
+        margin: 0 20px;
+    }
+
+    .slide {
+        flex-direction: column;
+        height: auto;
+    }
+
+
+
+    .slide img {
+        margin: 0 auto 20px;
+    }
+
+    .comment-container {
+        height: auto;
+    }
+
+    .change-bar {
+        width: 5vw;
+        height: 5vw;
+        border: 2px solid #fff;
+
+        cursor: pointer;
+        transition: 0.4s;
+        border-radius: 50%;
+        margin: 40px 10px 10px;
+    }
+
+    .footer-list {
+        flex-direction: column;
+    }
+
+
+}

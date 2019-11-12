@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <title>FUJI Japanese</title>
+    <link rel='stylesheet' href='css/signup.css' />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,600,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-grid">
+            <!--logo for returning landing page-->
+            <a class="nav-logo" href="index.html">
+                <img src="img/fuji-logo.png" alt="fuji-logo" height=36>
+            </a>
+            <!--progress bar to indicate the sign-up progress-->
+            <div class="nav-progress">
+                <div class="progress-bar">
+                    <a href=signup1.html>
+                        <div id="p2-bar1"></div>
+                    </a>
+                    <a href=signup2.html>
+                        <div id="p2-bar2"></div>
+                    </a>
+                    <a href=signup3.html>
+                        <div id="p2-bar3"></div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <main class='sign-up-page' id="page2">
+
+        <div class='sideimg'><img src="img/signimg2.png"></div>
+        <section class='form-content'>
+            <div class="form-grid">
+                <form id="preference" method="get" action="signup3.html">
+                    <h2 class="form-title">We need few more detail</h2>
+                    <div class="row">
+                        <div class="inputs">
+                            <label for="level">Choose your Japanese level</label>
+                            <select id="level">
+                                <option disabled value="">Choose your Japanese level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advance">Advance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="inputs">
+                            <label for="course">Choose your preferred course</label>
+                            <div class="course-container">
+                                <div class="course-row">
+                                    <div class="course-option">
+                                        <label>
+                                            <input type="checkbox" name="general" value="general"
+                                                checked><span>General</br>
+                                                Japanese</span>
+                                        </label>
+                                    </div>
+                                    <div class="course-option">
+                                        <label>
+                                            <input type="checkbox" name="spoken" value="spoken"> <span>Spoken</br>
+                                                Japanese</span>
+                                        </label>
+                                    </div>
+                                    <div class="course-option">
+                                        <label>
+                                            <input type="checkbox" name="cultural" value="cultural"><span>
+                                                Japanese</br>cultural
+                                            </span></label> </div>
+                                </div>
+                                <div class="course-row">
+                                    <div class="course-option">
+                                        <label>
+                                            <input type="checkbox" name="jlpt" value="jlpt"
+                                                checked><span>JLPT</br>Test</span>
+                                        </label> </div>
+                                    <div class="course-option">
+                                        <label>
+                                            <input type="checkbox" name="business" value="business"> <span>Business</br>
+                                                Japanese</span>
+                                        </label> </div>
+
+                                    <div class="course-option">
+                                        <label>
+                                            <input type="checkbox" name="daily" value="Daily"><span> Daily</br>
+                                                Japanese</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button>Last
+                        Step</button>
+                    <span class="log-noti">Already a FUJI Japanese member?
+                        <a class="log-noti">Log in</a> </span>
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer id="footer" class="fluid">
+        <div class="footer-list">
+            <a>About us</a>
+            <a>Blog</a>
+            <a>Privacy policy</a>
+            <a>Term of service</a>
+            <a>Contact us</a>
+            <a>FAQ</a>
+
+        </div>
+
+        <span id="company-name">FUJI Japanese 2013-2019</span>
+    </footer>
+
+    <script src="javascript/app.js"></script>
+</body>
+
+</html>
