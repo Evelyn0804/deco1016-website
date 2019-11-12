@@ -247,7 +247,12 @@ li {
 
     .end-img {
         background-image: none;
+        padding: 0;
+
     }
 
+    .tip {
+        margin-bottom: 40px;
+    }
 
 }
